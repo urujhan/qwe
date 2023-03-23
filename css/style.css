@@ -1,0 +1,363 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+  
+body {
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+*,
+*:before,
+*:after {
+      box-sizing: border-box;
+}
+  
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+  
+.header {
+    width: 100%;
+    padding-top: 30px;
+  
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+  
+.logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+}
+  
+.nav {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.nav1 {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 35px;
+    position: relative;
+  
+    color: #fff;
+    text-decoration: none;
+  
+    transition: color 0.3s linear;
+}
+  
+.nav1:hover {
+    color: #ffffff;
+}
+  
+.nav1:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1.5px; 
+  
+    background-color: #ffffff;
+    opacity: 0;
+  
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+  
+    transition: opacity .3s linear;
+}
+  
+.nav1:hover:after {
+    opacity: 1;
+}
+  
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.intro__title {
+    font-size: 45px;
+    font-weight: 700;
+    margin: 0 auto;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.intro__title:after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 60px auto;
+}
+
+.gradient {
+    color: transparent;    
+    -webkit-background-clip: text;
+    background-clip: text;
+	background-color: #fff;
+}
+
+.intro__suptitle {
+    margin-bottom: 20px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.button {
+    border: none;
+    color: rgb(255, 0, 0);
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+
+    background-color: #fff;
+}
+
+.button4 {
+    border-radius: 20px;
+}
+.card {
+    width: 225px;
+    min-height: 350px;
+    border: #fff;
+    display: flex;
+    flex-direction: column; 
+    border-radius: 7px;
+    transition: 0.2s;
+    position: relative;
+}
+
+  
+.card__top {
+    flex: 0 0 220px; 
+    position: relative;
+    overflow: hidden; 
+}
+  
+.card__image {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+  
+.card__image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+}
+  
+.card__image:hover > img {
+    transform: scale(1.1);
+}
+
+.card__label {
+    padding: 4px 8px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: #ff0000;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #ffffff;
+}
+  
+.card__bottom {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto; 
+    padding: 10px;
+}
+  
+.card__prices {
+    display: flex;
+    margin-bottom: 10px;
+    flex: 0 0 50%;
+}
+  
+.card__price::after {
+    content: "₽";
+    margin-left: 4px;
+    position: relative;
+}
+  
+.card__price--discount {
+    font-weight: 700;
+    font-size: 19px;
+    color: #ffffff;
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+  
+.card__price--discount::before {
+    content: "Со скидкой";
+    font-weight: 400;
+    font-size: 13px;
+    color: #ffffff;
+}
+  
+.card__price--common {
+    font-weight: 400;
+    font-size: 17px;
+    color: #ffffff;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: flex-end;
+}
+  
+.card__price--common::before {
+    content: "Обычная";
+    font-weight: 400;
+    font-size: 13px;
+    color: #ffffff;
+}
+  
+.card__title {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 150%;
+    color: #ffffff;
+}
+  
+.card__title:hover {
+    color: #ffffff;
+}
+  
+.card__add {
+    display: block;
+    width: 100%;
+    font-weight: 400;
+    font-size: 17px;
+    color: #000000;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    cursor: pointer; 
+    transition: 0.2s;
+    margin-top: auto; 
+}
+  
+.card__add:hover {
+    border: 1px solid #000000;
+    background-color: #000000;
+    color: #fff;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 225px);
+    width: 100%;
+    max-width: 1000px; 
+    justify-content: center;
+    justify-items: center; 
+    column-gap: 30px;
+    row-gap: 40px;
+    margin: 0 auto;
+}
+
+.card__container {
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 200px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {box-sizing: border-box}
+
+
+  input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #ffffff;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ffffff;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #ff1100;
+}
+
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+    width: 100%;
+  }
+}
